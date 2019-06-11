@@ -24,6 +24,7 @@ import Svg, {
   Use
 } from 'react-native-svg';
 import LinearGradient from './components/LinearGradient';
+import GroceryStore from './stores/groceries.store';
 
 export default class App extends React.Component {
   state = {users: []}
