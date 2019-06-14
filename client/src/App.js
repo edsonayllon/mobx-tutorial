@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Provider, inject, observer } from 'mobx-react';
+import { Provider } from 'mobx-react';
 import BirdStore from './stores/BirdStore';
+import AddBird from './components/AddBird';
 
 
 export default class App extends React.Component {
@@ -10,6 +11,7 @@ export default class App extends React.Component {
       <Provider BirdStore={BirdStore}>
         <View style={styles.container}>
           <Text>Users</Text>
+          <AddBird />
         </View>
       </Provider>
     );

@@ -8,7 +8,7 @@ class BirdStore {
   }
 
   @computed get birdCount () {
-    return this.birds.size;
+    return this.birds.length;
   }
 }
 
