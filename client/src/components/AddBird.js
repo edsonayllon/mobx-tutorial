@@ -24,7 +24,8 @@ class AddBird extends React.Component {
           <TextInput
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(bird) => this.setState({bird}) }
-            value={this.bird}
+            value={this.state.bird}
+            onSubmitEditing={this.handleSubmit}
           />
           <Button
             onPress={this.handleSubmit}
