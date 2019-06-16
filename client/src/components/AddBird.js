@@ -17,6 +17,7 @@ class AddBird extends React.Component {
 
   render() {
     const { BirdStore } = this.props;
+    console.log(this.props);
     return (
         <View>
           <Text style={{fontSize: 30}}>You have {BirdStore.birdCount} birds</Text>
@@ -30,6 +31,14 @@ class AddBird extends React.Component {
             title="Submit"
             color="#841584"
           />
+          <View>
+            {
+              BirdStore.birds.map(bird =>  (
+                <Text key={bird} >{ `\u2022 ${bird}` }</Text>
+              ))
+            }
+
+          </View>
         </View>
     );
   }
