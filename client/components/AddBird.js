@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { inject, observer } from 'mobx-react';
 
-@inject('BirdStore')
-@observer
 class AddBird extends React.Component {
   state = {
     bird: ''
@@ -38,11 +36,10 @@ class AddBird extends React.Component {
                 <Text key={bird} >{ `\u2022 ${bird}` }</Text>
               ))
             }
-
           </View>
         </View>
     );
   }
 }
 
-export default AddBird;
+export default inject("BirdStore")(observer(AddBird));

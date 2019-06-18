@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'mobx-react';
 import BirdStore from './stores/BirdStore';
 import AddBird from './components/AddBird';
 
-
-export default class App extends React.Component {
+export default class App extends Component<{}> {
   render() {
     return (
       <Provider BirdStore={BirdStore}>
@@ -24,22 +23,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  image: {
-    width: 100,
-    height: 120,
-  },
-  linearGradient: {
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5
-  },
-  buttonText: {
-    fontSize: 18,
-    fontFamily: 'Gill Sans',
-    textAlign: 'center',
-    margin: 10,
-    color: '#ffffff',
-    backgroundColor: 'transparent',
   },
 });
